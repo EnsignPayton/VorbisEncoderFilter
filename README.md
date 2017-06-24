@@ -3,8 +3,8 @@ Gets part of a decade old project running in VS2015
 
 ## Build Procedure
 1. Build lib/baseclasses/baseclasses.sln
-2. Build lib/core/ogg/libogg/win32/VS2010/libvorbis_static.sln
-3. Build lib/codecs/vorbis/libs/libvorbis/win32/VS2010/libogg_static.sln
+2. Build lib/core/ogg/libogg/win32/VS2010/libogg_static.sln
+3. Build lib/codecs/vorbis/libs/libvorbis/win32/VS2010/libvorbis_static.sln
 4. Build lib/dsfVorbisEncoder.sln
 
 **Note that I've only configured Debug. Release (probably) won't work.**
