@@ -150,13 +150,13 @@ vector<StampedOggPacket*> VorbisEncoder::encodeVorbis(const short* const inSampl
 			channel_order = channel_order_7_1;
             break;
 		default:
-			channel_order = channel_order_mono;  //?
+			channel_order = nullptr;  // n ch.
 			break;
 	}
 
     for (unsigned long chan = 0; chan < mSettings.mNumChannels; chan++) {
         //locOneOutputChannelBuffer = locBuffer[chan];
-        locOneOutputChannelBuffer = locBuffer[channel_order[chan]];
+        locOneOutputChannelBuffer = channel_order ? locBuffer[channel_order[chan]] : locBuffer[chan];
         locReadChannelBuffer = inSampleBuffer + chan;
 
         for (unsigned long sam = 0; sam < inNumSamplesPerChannel; sam++) {
