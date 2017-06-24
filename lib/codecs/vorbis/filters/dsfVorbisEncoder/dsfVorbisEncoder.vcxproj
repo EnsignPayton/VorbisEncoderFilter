@@ -92,7 +92,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(BASECLASSES);..\..\..\..\core\directshow\libDirectshowAbstracts;..\..\..\..\core\ogg;..\..\..\..\helper;..\..\libs\libOOVorbis;..\..\libs\libvorbis\include;..\..\..\..\core\ogg\libogg\include;..\..\..\..\core\directshow\dsfOggDemux2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\baseclasses;..\..\..\..\core\directshow\libDirectshowAbstracts;..\..\..\..\core\ogg;..\..\..\..\helper;..\..\libs\libOOVorbis;..\..\libs\libvorbis\include;..\..\..\..\core\ogg\libogg\include;..\..\..\..\core\directshow\dsfOggDemux2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_BIND_TO_CURRENT_CRT_VERSION;WIN32;_DEBUG;_WINDOWS;_USRDLL;DSFVORBISENCODER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
