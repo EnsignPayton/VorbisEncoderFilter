@@ -103,7 +103,7 @@
       <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Winmm.lib;Strmiids.lib;Quartz.lib;Ole32.Lib;AdvAPI32.Lib;OleAut32.Lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;Strmiids.lib;Quartz.lib;Ole32.Lib;AdvAPI32.Lib;OleAut32.Lib;user32.lib;strmbasd.lib;libvorbis_static.lib;libogg_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)dsfVorbisEncoder.dll</OutputFile>
       <ModuleDefinitionFile>vorbisencoder.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -113,6 +113,7 @@
       <DataExecutionPrevention />
       <ImportLibrary>$(OutDir)dsfVorbisEncoder.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>..\..\libs\libvorbis\win32\VS2010\Win32\Debug;..\..\..\..\core\ogg\libogg\win32\VS2010\Win32\Debug;..\..\..\..\baseclasses\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -236,6 +237,20 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\core\directshow\libDirectshowAbstracts\libDirectshowAbstracts.vcxproj">
+      <Project>{ea7091bb-9906-41df-9738-f4858a136086}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\core\ogg\libOOOgg\libOOOgg.vcxproj">
+      <Project>{223acc19-608e-4e1b-a054-067f0cacb272}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\helper\libilliCore\libilliCore.vcxproj">
+      <Project>{2da569ec-3e22-4bc9-a242-c7a56eb9c6f4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\libOOVorbis\libOOVorbis.vcxproj">
+      <Project>{c97a67f9-b786-41fa-9fc9-13167fe2ba49}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
