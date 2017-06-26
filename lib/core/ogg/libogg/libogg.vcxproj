@@ -123,6 +123,9 @@
     <ClInclude Include="include\ogg\ogg.h" />
     <ClInclude Include="include\ogg\os_types.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="win32\ogg.def" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
