@@ -2,22 +2,20 @@
 Gets part of a decade old project running in VS2015
 
 ## Build Procedure
-1. Build lib/baseclasses/baseclasses.sln
-2. Build lib/core/ogg/libogg/win32/VS2010/libogg_static.sln
-3. Build lib/codecs/vorbis/libs/libvorbis/win32/VS2010/vorbis_static.sln
-4. Build lib/dsfVorbisEncoder.sln
+1. Build lib/dsfVorbisEncoder.sln
+2. Done!
 
-**Note that I've only configured Debug. Release (probably) won't work.**
+**Note that Debug and Release both work now.**
 
 ## Register
 ```cmd
-cd lib\Win32\Debug
+cd lib\Win32\Debug (or Release)
 regsvr32.exe .\dsfVorbisEncoder.dll
 ```
 
 ## Unregister
 ```cmd
-cd lib\Win32\Debug
+cd lib\Win32\Debug (or Release)
 regsvr32.exe -u .\dsfVorbisEncoder.dll
 ```
 
